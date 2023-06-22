@@ -1,9 +1,9 @@
 version: "3.2"
 
 services:
-  meu-coelinho:
+  rabbit-mq:
     image: rabbitmq:3-management-alpine
-    container_name: 'meu-coelinho'
+    container_name: 'rabbit-mq'
     environment:
       - RABBITMQ_DEFAULT_USER=dev
       - RABBITMQ_DEFAULT_USER=senhadev
@@ -18,4 +18,3 @@ services:
 networks:
   rabbitmq_go_net:
     driver: bridge
-    
